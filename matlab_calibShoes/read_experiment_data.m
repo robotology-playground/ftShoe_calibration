@@ -41,6 +41,10 @@ function dataset = read_experiment_data(acqPath, experimentName, params)
         for i=1:size(params.amtiNames,2)
             dataFileName=strcat(amtiDataPath, '/', params.amtiNames{i},'/',expDataFileName);
             [rawDataset.amtiData{i}, rawDataset.amtiTime{i}]=readDataDumper(dataFileName);
+            % Change sign in order to get force platforms providing forces
+            % applied by the ground to the human to comply with the
+            % measurements provided by the ftSensors
+            rawDataset.amtiData{i} = -1 * rawDataset.amtiData{i};
             if rawDataset.highestStartTime < rawDataset.amtiTime{i}(1)
                 rawDataset.highestStartTime = rawDataset.amtiTime{i}(1);
             end
