@@ -67,7 +67,8 @@ function [ stats ] = generate_plots_and_stats( indata, saveFigs, dataPath, folde
                 figname = strcat(dataPath, '/', folderName, '/figs/',exps{e}, '_Wrenches_', devNames{d});
                 print(figname, '-dpng')
                 close all
-            end    
+            end
+%             close all
         end
     end
     

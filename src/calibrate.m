@@ -4,7 +4,8 @@ close all;
 addpath(genpath('../ext'));
 
 %% Load and run acquisition parameters
-run('parameters_right_26bis092017.m')
+run('../conf/parameters_right_26bis092017.m')
+%run('../conf/parameters_left_26bis092017.m')
 
 %% Compute mean of the static offset for both shoes and forceplates
 run('estimateOffset.m')
@@ -33,8 +34,8 @@ for e = 1 : size(params.expList,2)
 end
 
 %% Generate plot and stats pre calibration%
-names = {'ForeFoot', 'Heel'};
-stats = generate_plots_and_stats(preCalibrationDataset, 'False', params.acqPath, 'PreCalibration_sg', names, 'False');
+% names = {'ForeFoot', 'Heel'};
+% stats = generate_plots_and_stats(preCalibrationDataset, 'False', params.acqPath, 'PreCalibration_sg', names, 'False');
 
 %% Verify sensors matching
 ftsNames = params.ftsNames;
@@ -108,4 +109,6 @@ stats = generate_plots_and_stats(postCalibrationDataset, 'False', params.acqPath
 for s = 1:size(ftsNames,2)
    calibMatricesDriver.(ftsNames{s}) = calibDataset.estCalibMatrices.(ftsNames{s})/(calibDataset.wbCalibMatrices.(ftsNames{s}));
 end
-save('matrices_right.mat', 'calibMatricesDriver') 
+
+save('matrices_right.mat', 'calibMatricesDriver')
+%save('matrices_left.mat', 'calibMatricesDriver')
