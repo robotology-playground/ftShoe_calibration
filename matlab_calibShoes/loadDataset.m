@@ -1,9 +1,7 @@
 clear all;
 close all;
 
-%% Tasks
-%List of all acquired tasks
-
+addpath(genpath('../ext'));
 
 %% Load and run acquisition parameters
 run('parameters_right_26bis092017.m')
