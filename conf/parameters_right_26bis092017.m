@@ -5,7 +5,7 @@
 params.ftsPortName='ft';
 params.amtiPortName='amti';
 
-params.calibMatPath = '../../gitlab_calibration_data/official_calibration_matrices/'; % path to where calibration matrices can be found
+params.calibMatPath = '../../GITLAB//gitlab_calibration_data/official_calibration_matrices/'; % path to where calibration matrices can be found
 
 params.ftsNames={'ftShoe_right_front', 'ftShoe_right_rear'};
 params.ftsSerialNumbers={'SN230', 'SN026'}; % should be defined in the same order of ftNames
@@ -14,8 +14,8 @@ params.amtiNames={'first', 'second'}; % should be defined in the same order of f
 % Special trial to remove offsets when no weight applied
 params.staticOffsetExp = 'analog_o';
 
-params.staticOffsetAcqPath = '../../gitlab_calibration_data/26sept2017/26_sept_bis/dumper';
-params.acqPath = '../../gitlab_calibration_data/26sept2017/26_sept_bis/dumper';
+params.staticOffsetAcqPath = '../../GITLAB/gitlab_calibration_data/26sept2017/26_sept_bis/dumper';
+params.acqPath = '../../GITLAB/gitlab_calibration_data/26sept2017/26_sept_bis/dumper';
 
 params.expList = {'analog_o_00001', ...
                   'analog_o_00002', ...
