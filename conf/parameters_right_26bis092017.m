@@ -8,7 +8,7 @@ params.amtiPortName='amti';
 params.calibMatPath = '../../gitlab_calibration_data/official_calibration_matrices/'; % path to where calibration matrices can be found
 
 params.ftsNames={'ftShoe_right_front', 'ftShoe_right_rear'};
-params.ftsSerialNumbers={'SN026', 'SN230'}; % should be defined in the same order of ftNames
+params.ftsSerialNumbers={'SN230', 'SN026'}; % should be defined in the same order of ftNames
 params.amtiNames={'first', 'second'}; % should be defined in the same order of ftNames
 
 % Special trial to remove offsets when no weight applied
