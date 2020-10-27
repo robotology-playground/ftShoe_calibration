@@ -48,6 +48,7 @@ end
 % Proper order match is a requirement for all the procedure
 for d = 1 : size(ftsNames,2)
     calibDataset.inputs.fts.(ftsNames{d}).data = [];
+    calibDataset.inputs.fts.(ftsNames{d}).time = [];
     calibDataset.inputs.amtiInFtsSoR.(amtiNames{d}).data = [];
 end
 
@@ -61,6 +62,7 @@ for e = 1 : size(params.calibExpList,2)
     [calibDataset.(params.calibExpList{e}).('fts'), calibDataset.wbCalibMatrices] = get_raw_fts_data(preCalibrationDataset.(params.calibExpList{e}).fts, params);
     for d = 1 : size(ftsNames,2)
         calibDataset.inputs.fts.(ftsNames{d}).data = [calibDataset.inputs.fts.(ftsNames{d}).data; calibDataset.(params.calibExpList{e}).fts.(ftsNames{d}).data];
+        calibDataset.inputs.fts.(ftsNames{d}).time = [calibDataset.inputs.fts.(ftsNames{d}).time; calibDataset.(params.calibExpList{e}).fts.(ftsNames{d}).time];
         calibDataset.inputs.amtiInFtsSoR.(amtiNames{d}).data = [calibDataset.inputs.amtiInFtsSoR.(amtiNames{d}).data; preCalibrationDataset.(params.calibExpList{e}).amtiInFtsSoR.(amtiNames{d}).data];
     end
 end
