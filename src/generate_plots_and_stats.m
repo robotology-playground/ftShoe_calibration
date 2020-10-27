@@ -7,7 +7,7 @@ function [ stats ] = generate_plots_and_stats( indata, saveFigs, dataPath, folde
         mkdir(char(strcat(dataPath, '/', folderName,  '/stats')))
     end
     exps = fieldnames(indata);
-    for e = 1 : size(exps,1)
+    for e = 2 : size(exps,1)
         for d = 1 : size(devNames,2)
             figure('Name', strcat(exps{e}, ' Wrenches - ', devNames{d}));
             pos = get(gcf,'pos');
