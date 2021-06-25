@@ -4,8 +4,8 @@ close all;
 addpath(genpath('../ext'));
 
 %% Load and run acquisition parameters
-run('../conf/parameters_right_26bis092017.m')
-%run('../conf/parameters_left_26bis092017.m')
+% run('../conf/parameters_right_FT_v1_0.m')
+run('../conf/parameters_left_FT_v1_0.m')
 
 %% Compute mean of the static offset for both shoes and forceplates
 run('estimateOffset.m')
@@ -112,5 +112,5 @@ for s = 1:size(ftsNames,2)
    calibMatricesDriver.(ftsNames{s}) = calibDataset.estCalibMatrices.(ftsNames{s})/(calibDataset.wbCalibMatrices.(ftsNames{s}));
 end
 
-save('matrices_right.mat', 'calibMatricesDriver')
-%save('matrices_left.mat', 'calibMatricesDriver')
+% save('v1_0_18june2021_matrices_right.mat', 'calibMatricesDriver')
+save('v1_0_18june2021_matrices_left.mat', 'calibMatricesDriver')
