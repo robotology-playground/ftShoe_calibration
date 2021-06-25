@@ -61,7 +61,7 @@ function [ stats ] = generate_plots_and_stats( indata, saveFigs, dataPath, folde
                 xlim([times.fts(1), times.fts(end)]);
 
                 %legend(strcat('Amti platform - ',taskData.amtiNames{a}),strcat('ftShoe - ',taskData.ftNames{a}));
-                legend('ftShoes','forceplates');
+                legend('shoes','forceplates');
             end
             if strcmp(saveFigs,'True')
                 figname = strcat(dataPath, '/', folderName, '/figs/',exps{e}, '_Wrenches_', devNames{d});
