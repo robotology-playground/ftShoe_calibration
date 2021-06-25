@@ -5,7 +5,7 @@
 params.ftsPortName='ft';
 params.amtiPortName='amti';
 
-params.calibMatPath = '/Users/claudialatella/Documents/Repos/GITHUB/ftShoe_calibration/calibMatrixFromTech'; % path to where calibration matrices can be found
+params.calibMatPath = 'your-path-to-the-calibration-matrices'; % path to where calibration matrices can be found
 
 params.ftsNames={'ftShoe_left_front', 'ftShoe_left_rear'};
 params.ftsSerialNumbers={'SN001', 'SN309'}; % should be defined in the same order of ftNames
@@ -14,8 +14,8 @@ params.amtiNames={'first', 'second'}; % should be defined in the same order of f
 % Special trial to remove offsets when no weight applied
 params.staticOffsetExp = 'analog_o';
 
-params.staticOffsetAcqPath = '/Users/claudialatella/Documents/Repos/GITHUB/ftShoe_calibration/dataset/FT_v1_0_Calibration_18_June_2021';
-params.acqPath = '/Users/claudialatella/Documents/Repos/GITHUB/ftShoe_calibration/dataset/FT_v1_0_Calibration_18_June_2021';
+params.staticOffsetAcqPath = 'your-path-to-the-dataset';
+params.acqPath = 'your-path-to-the-dataset';
 
 params.expList = {'analog_o_00017', ...
                   'analog_o_00018', ...
